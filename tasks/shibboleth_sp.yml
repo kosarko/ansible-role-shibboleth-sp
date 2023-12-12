@@ -8,7 +8,7 @@
     - install
 
 - name: Generate Shibboleth key and cert
-  command: shib-keygen -h {{ shibboleth_hostname }} -e {{ shibboleth_sp_entity_id }}
+  command: shib-keygen -h "{{ shibboleth_hostname }}" -e "{{ shibboleth_sp_entity_id }}"
   args:
     chdir: /etc/shibboleth
     creates: /etc/shibboleth/sp-key.pem
